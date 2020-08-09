@@ -8,7 +8,7 @@ class SessionHelper:
         self.app.open_homepage()
         wd.find_element_by_name("username").send_keys(username)
         wd.find_element_by_name("password").send_keys(password)
-        wd.find_element_by_xpath("//input[@value='Login']").click()
+        wd.find_element_by_css_selector('input[type="submit"]').click()
 
     def logout(self):
         wd = self.app.wd
